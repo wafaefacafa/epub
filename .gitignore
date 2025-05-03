@@ -1,0 +1,7 @@
+# 新增忽略规则
+bin/
+obj/
+*.exe
+*.dll
+WebView2Runtime/
+publish/
