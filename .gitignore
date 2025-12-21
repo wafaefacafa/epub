@@ -5,3 +5,11 @@ obj/
 *.dll
 WebView2Runtime/
 publish/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+output/
