@@ -19,7 +19,7 @@ try {
 
 # 检查是否已安装依赖
 try {
-    python -c "import streamlit" 2>$null
+    $null = python -c "import streamlit" 2>&1
     if ($LASTEXITCODE -ne 0) {
         throw "Streamlit not installed"
     }

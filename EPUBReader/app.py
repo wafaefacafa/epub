@@ -5,6 +5,9 @@ import os
 from pathlib import Path
 import json
 
+# 注意：此版本为演示原型，使用模拟数据展示功能
+# Note: This version is a demonstration prototype using mock data to showcase functionality
+
 # 配置页面
 st.set_page_config(
     page_title="轻小说阅读器",
@@ -85,7 +88,10 @@ with col2:
         novel = st.session_state.selected_novel
         
         # 显示封面占位符
-        st.image("https://via.placeholder.com/300x400?text=封面", use_container_width=True)
+        try:
+            st.image("https://via.placeholder.com/300x400?text=封面", use_container_width=True)
+        except Exception:
+            st.info("📷 封面加载中...")
         
         st.subheader(novel['title'])
         st.write(f"**编号:** {novel['id']}")
